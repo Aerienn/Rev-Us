@@ -15,32 +15,39 @@ Follow these instructions to set up and run the system locally.
   - SpaCy's NLP model, en_core_web_sm
 
 ### Installation
-1. <b>Clone the Repository:</b> `gh repo clone Aerienn/Rev-Us`
-2. <b>Install the required dependencies:</b>
-```bash
-pip install -r requirements.txt
-```
-Note: It is recommended to create a virtual environment.
-3. <b> Obtain the SVM Model.</b>
-    - You can use this project's SVM model. ([TF-IDF Vectorizer](https://drive.google.com/file/d/1EzHFwNxd1FXUvZ8sArzX0moWrhA0fdHP/view?usp=drive_link) and [SVM Classifier](https://drive.google.com/file/d/1ABWUGve7-HnrITGXyiQ2GpGj0yEXaOxm/view?usp=drive_link)).
-    Save the joblib files in `machine_learning/models/` folder
-    - If you want to make your own model, You may use the provided jupyter notebooks in the machine learning folder. Please check the README file in the machine_learning folder for the complete instructions.
-4. <b>Model Dependency: </b> In order to perform a consolidated analysis with our tool, you will need to download the 'en_core_web_sm' SpaCy model. This model provides essential linguistic information for various natural language processing tasks. In the website's case, the model is used to analyze the what are the top negative,positive, and neutral phases.
-`python -m spacy download en_core_web_sm`
-5. <b> Running the Web app:
-For Development:
-```bash
-set FLASK_ENV=development
-python run.py
-```
+1. <b>Clone the Repository:</b> 
+    ```bash
+   gh repo clone Aerienn/Rev-Us
+    ```
+3. <b>Install the required dependencies:</b>
+    ```bash
+    pip install -r requirements.txt
+    ```
+    Note: It is recommended to create a virtual environment.
 
-For Production:
-```
-set FLASK_ENV=production
-waitress-serve app:app
-``````
---You can deploy the app only using ngrok 
-```ngrok http 5000```
+4. <b> Obtain the SVM Model.</b>
+      - You can use this project's SVM model. ([TF-IDF Vectorizer](https://drive.google.com/file/d/1EzHFwNxd1FXUvZ8sArzX0moWrhA0fdHP/view?usp=drive_link) and [SVM Classifier](https://drive.google.com/file/d/1ABWUGve7-HnrITGXyiQ2GpGj0yEXaOxm/view?usp=drive_link)).
+      Save the joblib files in `machine_learning/models/` folder
+      - If you want to make your own model, You may use the provided jupyter notebooks in the machine learning folder. Please check the README file in the machine_learning folder for the complete instructions.
+
+5. <b>Model Dependency: </b> In order to perform a consolidated analysis with our tool, you will need to download the 'en_core_web_sm' SpaCy model. This model provides essential linguistic information for various natural language processing tasks. In the website's case, the model is used to analyze the what are the top negative,positive, and neutral phases.
+    ```bash
+    python -m spacy download en_core_web_sm
+    ```
+
+6. <b> Running the Web app:
+    - For Development:
+    ```bash
+    set FLASK_ENV=development
+    python run.py
+    ```
+    
+    - For Production:
+    ```
+    set FLASK_ENV=production
+    waitress-serve app:app
+    ```
+    You can deploy the app online using [ngrok](https://ngrok.com/download).
 
 
 ## Data Source
