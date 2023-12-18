@@ -44,10 +44,9 @@ Follow these instructions to set up and run the system locally.
     
     - For Production:
     ```
-    set FLASK_ENV=production
-    waitress-serve app:app
+    waitress-serve --host=127.0.0.1 --port=5000 app:app
     ```
-    You can deploy the app online using [ngrok](https://ngrok.com/download).
+      You can deploy the app online using [ngrok](https://ngrok.com/download).
 
 
 ## Data Source
