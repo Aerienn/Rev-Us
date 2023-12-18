@@ -5,3 +5,6 @@ code/commit_log.txt
 machine_learning/.ipynb_checkpoints/
 RevU_App/machine_learning/models/SVM_classifier.joblib
 RevU_App/machine_learning/models/tfidf_vectorizer.joblib
+venv/
+__pycache__
+app/__pycache__/*.pyc
